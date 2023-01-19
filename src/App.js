@@ -28,6 +28,14 @@ export default function App() {
 
   return (
     <>
+      <label htmlFor="meme">Meme template</label>
+      <input
+        id="meme"
+        onChange={(event) => {
+          setChosenMeme(event.target.value);
+        }}
+      />
+      <br />
       <label htmlFor="top">Top text:</label>
       <input
         id="top"
@@ -35,18 +43,12 @@ export default function App() {
           setTop(event.target.value);
         }}
       />
+      <br />
       <label htmlFor="bottom">Bottom text:</label>
       <input
         id="bottom"
         onChange={(event) => {
           setBottom(event.target.value);
-        }}
-      />
-      <label htmlFor="meme">Choose a meme by its number </label>
-      <input
-        id="meme"
-        onChange={(event) => {
-          setChosenMeme(event.target.value);
         }}
       />
       <br />
